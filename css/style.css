@@ -1,0 +1,148 @@
+/* VARIABLES */
+:root {
+--yellow: #FFF500;
+--bg-blue: #000431;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-blue);
+    width: 100%;
+    overflow: hidden;
+}
+
+body .container {
+    height: calc(100% - 114px);
+    border: solid 7px var(--yellow);
+    margin: 50px 48px;
+    overflow: hidden;
+}
+
+/* HEADER 1 */
+
+header .header {
+    width: 100%;
+    display: flex;
+    border-bottom: solid 7px var(--yellow);
+}
+
+header .header span {
+    margin-right: 12px;
+}
+
+header .header span:nth-child(2n) {
+    color: var(--yellow);
+}
+
+header .header span:nth-child(2n + 1) {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--yellow);
+}
+
+header .header .text-container, .right-to-left {
+    white-space: nowrap;
+    font-family: 'gtfxebo';
+    font-size: 160px;
+    animation: rightToLeft 200s linear infinite;
+    animation-delay: -10s;
+}
+
+/* SUBHEADER */
+
+header .sub-header {
+    width: 100%;
+    display: flex;
+    border-bottom: solid 7px var(--yellow);
+}
+
+header .sub-header span {
+    margin-right: 12px;
+}
+
+header .sub-header span:nth-child(2n) {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--yellow);
+}
+
+header .sub-header span:nth-child(2n + 1) {
+    color: var(--yellow);
+}
+
+header .sub-header .text-container, .left-to-right {
+    white-space: nowrap;
+    font-family: 'gtfxebl';
+    font-size: 47px;
+    animation: leftToRight 100s linear infinite;
+    animation-delay: -50s;
+}
+
+
+/* DESCRIPTION */
+.content {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    height: calc( 100% - 266px);
+    max-width: 100%;
+}
+
+.content .photo-animation {
+    width: calc(100% - 377px);
+    overflow: hidden;
+    z-index: 999;
+}
+
+.content .description {
+    width: 377px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    color: var(--yellow);
+    background: none;
+    padding: 0 60px 0 0;
+    font-family: 'gtfr';
+}
+
+.content .description p {
+    font-size: 18px;
+    line-height: 1.56rem;
+}
+
+.content .description p u {
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid var(--yellow);
+}
+
+.content .description .email-contact {
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+}
+
+.content .description .email-contact svg {
+    width: 32px;
+    margin-right: 12px;
+    fill: var(--yellow);
+}
+
+
+
+@keyframes rightToLeft {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+@keyframes leftToRight {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
